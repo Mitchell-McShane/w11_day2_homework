@@ -18,4 +18,5 @@ public class Borrower {
     public void addBookToCollection(Book book) {
         this.collection.add(book);
     }
+
 }

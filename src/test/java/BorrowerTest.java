@@ -11,7 +11,7 @@ public class BorrowerTest {
 
     @Before
     public void before(){
-        library = new Library(2);
+        library = new Library(3);
         book = new Book("Origin", "Dan Brown", "Crime");
         borrower = new Borrower("Mr Potter");
     }
@@ -26,6 +26,7 @@ public class BorrowerTest {
         borrower.addBookToCollection(book);
         assertEquals(1, borrower.getBookCount());
     }
+
 
 
 }

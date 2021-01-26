@@ -7,14 +7,16 @@ public class LibraryTest {
 
     private Book book;
     private Book book1;
+    private Book book2;
     private Library library;
     private Borrower borrower;
 
     @Before
     public void before(){
-        library = new Library(2);
+        library = new Library(3);
         book = new Book("Lord of the Rings", "J.R.R. Tolkien", "Fantasy");
         book1 = new Book("The Da Vinci Code", "Dan Brown", "Thriller");
+        book2 = new Book("Origin", "Dan Brown", "Crime");
         borrower = new Borrower("Mr Potter");
     }
 
@@ -39,7 +41,7 @@ public class LibraryTest {
 
     @Test
     public void checkCapacity(){
-        assertEquals(2, library.getCapacity());
+        assertEquals(3, library.getCapacity());
     }
 
 
