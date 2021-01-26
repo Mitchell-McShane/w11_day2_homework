@@ -1,6 +1,8 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.HashMap;
+
 import static org.junit.Assert.assertEquals;
 
 public class LibraryTest {
@@ -16,7 +18,7 @@ public class LibraryTest {
         library = new Library(3);
         book = new Book("Lord of the Rings", "J.R.R. Tolkien", "Fantasy");
         book1 = new Book("The Da Vinci Code", "Dan Brown", "Thriller");
-        book2 = new Book("Origin", "Dan Brown", "Crime");
+        book2 = new Book("Origin", "Dan Brown", "Thriller");
         borrower = new Borrower("Mr Potter");
     }
 
@@ -42,6 +44,14 @@ public class LibraryTest {
     @Test
     public void checkCapacity(){
         assertEquals(3, library.getCapacity());
+    }
+
+    @Test
+    public void checkAddBookGenreToCheck(){
+        library.addBook(book);
+        library.addBook(book1);
+        library.addBook(book2);
+        library.addBookGenreToCheck();
     }
 
 
