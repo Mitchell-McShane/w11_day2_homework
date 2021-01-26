@@ -8,12 +8,14 @@ public class LibraryTest {
     private Book book;
     private Book book1;
     private Library library;
+    private Borrower borrower;
 
     @Before
     public void before(){
         library = new Library(2);
         book = new Book("Lord of the Rings", "J.R.R. Tolkien", "Fantasy");
         book1 = new Book("The Da Vinci Code", "Dan Brown", "Thriller");
+        borrower = new Borrower("Mr Potter");
     }
 
     @Test
